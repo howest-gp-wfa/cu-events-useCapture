@@ -53,10 +53,11 @@ const KlikBinnen = () => {
 
 function GeefKlik(e){
   let propagationStopped = (slcPropagate.options[slcPropagate.selectedIndex].value == 'true');
-   divFeedback.innerHTML += `Je klikte op ${this.id} <br/>`; 
-    if (propagationStopped) e.stopPropagation();
+  divFeedback.innerHTML += `Knopnr: ${e.button}<br/>`;
+  divFeedback.innerHTML += `Getriggered door ${this.id} <br/>`; 
+  divFeedback.innerHTML += `Je klikte op: ${e.target.id} <br/>`; 
+   if (propagationStopped) e.stopPropagation();
 }
-
 
 
 
