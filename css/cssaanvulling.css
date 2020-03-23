@@ -1,0 +1,41 @@
+#divBuiten{
+  width: 200px;
+  height: 200px;
+  padding : 40px;
+  background-color : #FFFF99;
+  border-radius: 50%;
+  border : 2px solid black;
+}
+
+#divMidden{
+  width: 120px;
+  height: 120px;
+  padding : 40px;
+  background-color: #CCFFCC;
+  border-radius: 50%;
+  border : 2px solid black;
+}
+
+#divBinnen{
+  width: 40px ;
+  height: 40px ;
+  padding : 40px;
+  background-color: brown;
+  border-radius: 50%;
+  border : 2px solid black;
+}
+
+#divFeedback, #divClickZone {
+  margin-right: 15px;
+  float: left;
+}
+
+#divSelects {
+  display: inline-block;
+}
+
+#slcCapture {
+  float: left;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}

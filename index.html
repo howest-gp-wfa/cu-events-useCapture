@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cssaanvulling.css" />
+  <script src="js/script.js"></script>
+  <title>Events</title>
+</head>
+
+<body>
+  <h1>Events</h1>
+  <h2>Bubbling of Capturing</h2>
+
+  <div id='divSelects'>
+    <select name="slcCapture" id="slcCapture" size='3'>
+      <option value="true" selected=true>useCapture true</option>
+      <option value="false">useCapture false</option>
+    </select>
+
+    <select name="slcPropagate" id="slcPropagate" size='3'>
+      <option value="true" >stopPropagation true</option>
+      <option value="false" selected=true>stopPropagation false</option>
+    </select>
+  </div>
+  <br>
+
+
+
+  <div id="divClickZone">
+    <div id="divBuiten">
+      <div id="divMidden">
+        <div id='divBinnen'></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="divFeedback"></div>
+</body>
+
+</html>
