@@ -3,7 +3,6 @@
 var divFeedback; 
 var divBuiten, divMidden,divBinnen;
 var slcCapture;
-var teller;
 
 window.addEventListener('load',Initieer);
 
@@ -54,13 +53,12 @@ const KlikBinnen = () => {
 function GeefKlik(e){
   let propagationStopped = 
     (slcPropagate.options[slcPropagate.selectedIndex].value == 'true');
-    console.log(e.target);
   divFeedback.innerHTML += `Knopnr: ${e.button}<br/>`;
-  divFeedback.innerHTML += `Getriggered door ${this.id} <br/>`; 
-  divFeedback.innerHTML += `Je klikte op: ${e.target.id} <br/>`; 
-  divFeedback.innerHTML += `Plaats: ${e.screenX} ${e.screenY} <br/>`; 
+  divFeedback.innerHTML += `e.target: ${e.target.id} <br/>`;   
+  divFeedback.innerHTML += `e.currentTarget ${e.currentTarget.id} <br/>`; 
+  divFeedback.innerHTML += `Plaats: X ${e.screenX} - Y ${e.screenY} <br/>`; 
+  divFeedback.innerHTML += `PlaatsDoc: X ${e.pageX} - Y ${e.pageY} <br/>`; 
+  divFeedback.innerHTML += `PlaatsClient: X ${e.clientX} - Y ${e.clientY} <br/>`; 
+  divFeedback.innerHTML += '--------------------------------------<br />';
    if (propagationStopped) e.stopPropagation();
 }
-
-
-
