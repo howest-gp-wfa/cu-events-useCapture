@@ -52,14 +52,15 @@ const KlikBinnen = () => {
 }
 
 function GeefKlik(e){
-  let propagationStopped = (slcPropagate.options[slcPropagate.selectedIndex].value == 'true');
+  let propagationStopped = 
+    (slcPropagate.options[slcPropagate.selectedIndex].value == 'true');
+    console.log(e.target);
   divFeedback.innerHTML += `Knopnr: ${e.button}<br/>`;
   divFeedback.innerHTML += `Getriggered door ${this.id} <br/>`; 
   divFeedback.innerHTML += `Je klikte op: ${e.target.id} <br/>`; 
+  divFeedback.innerHTML += `Plaats: ${e.screenX} ${e.screenY} <br/>`; 
    if (propagationStopped) e.stopPropagation();
 }
-
-
 
 
 
